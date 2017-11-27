@@ -1,3 +1,17 @@
+
+ .remove-margin-x {
+	 margin-left: 0px !important;
+	 margin-right: 0px !important;
+ }
+ 
+ .padding-left-10{
+	 padding-left: 10px;
+ }
+ 
+ .padding-right-10 {
+	 padding-right: 10px;
+ }
+
  body, html {
 	 height: 100%;
 	 position: relative;
@@ -18,7 +32,7 @@
 	  font-family: 'MontserratExtraLight'; 
  }
  
- #cover-image, #tastes-best, .chef-selection {
+ #cover-image, #tastes-best, .chef-selection, .testimonial {
 	 position: relative;
 	 background-repeat: no-repeat;
 	 background-position: center;
@@ -37,7 +51,7 @@
 	  background-color: rgba(0,0,0,0.5);
   }
  
- #site-title h1, #tastes-best .caption, .chef-selection h4 {
+ #site-title h1, #tastes-best .caption, .chef-selection h4, .testimonial .caption {
 	 text-transform: lowercase;
 	 color: #FFF;
 	 text-align: center;
@@ -101,12 +115,75 @@
 	 font-size: 50px;
  }
  
- .footer {
+ .delivery-apps {
+	 padding: 75px 0px;
+ }
+ 
+ .delivery-apps .title {
+	 text-transform: uppercase;
+	 text-align: center;
+ }
+ 
+ .delivery-apps-icons img {
+	 margin: 0px auto;
+	 max-height: 128px;
+	 padding: 25px 25px 0px 25px;
+	 display: inline;
+ }
+ 
+ .testimonial {
+	 background-image: url('images/pink_coffee.jpeg');
+	 height: 700px;
+ }
+ 
+ .testimonial .caption h1{
+	 background-color: rgba(0,0,0,0.7);
+	 text-transform: uppercase;
+	 color: #FFF;
+	 padding: 50px;
+ }
+ 
+ .footer{
+	 padding: 50px 0px;
+	 background-color: #000;
+	 color: #FFF;
+ }
+ 
+ .footer .content {
+	 width: 80%;
+	 margin: 0px auto;
+ }
+ 
+ .address, .ping-group, .ring-group, .chase-group {
+	 width: 80%;
+	 margin: 0px auto;
+ }
+ 
+ .credits {
 	 padding: 25px 0px;
 	 color: #000;
 	 background-color: #FFF;
 	 text-align: center;
  }
+ 
+ .ping-group img {
+	 max-height: 32px;
+	 margin-top: 10px;
+ }
+ 
+  .ping-group img, .ring-group img, .chase-group img {
+	 display: inline;
+  }
+  
+  a, a:hover, a:visited, a:active {
+	  text-decoration: none !important;
+	  color: #FFF;
+  }
+  
+  .ring-group a span {
+	  padding-left: 15px;
+  }
+ 
  
  @media (max-width: 768px){
 	 .menu { padding-top: 70px; }
@@ -123,4 +200,14 @@
 	.chef-selection h4 {
 		width: 100%;
 	}
+	
+	.delivery-apps img {
+		max-height: 100px;
+	}
+ }
+ 
+ @media (max-width: 992px) {
+	 .footer .content{
+		 width: 100%;
+	 }
  }

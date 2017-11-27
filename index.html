@@ -4,6 +4,7 @@
 	<title>Highway Hotel</title>
 	<link href="main.css" rel="stylesheet">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/montserrat" type="text/css"/>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nemoy" type="text/css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -20,7 +21,7 @@
 	
 	<div class="menu">
 	
-		<h3>
+		<h3 class="lighter">
 			snacks  drinks  food
 		</h3>
 		
@@ -53,7 +54,81 @@
 		</div>
 	</div>
 	
-	<div class="footer lighter">
+	<div class="delivery-apps">
+		<div class="title">
+			<h1 class="regular">
+				find us on
+			</h1>
+		</div>
+		<div class="delivery-apps-icons text-center">
+			<img class="img-responsive" src="images/zomato_500.png" alt="Zomato" data-toggle="tooltip" title="Zomato">
+			<img class="img-responsive" src="images/foodpanda_500.png" alt="Zomato" data-toggle="tooltip" title="Foodpanda">
+			<img class="img-responsive" src="images/swiggy_500.png" alt="Zomato" data-toggle="tooltip" title="Swiggy">
+		</div>
+	</div>
+	
+	<div class="testimonial">
+		<div class="caption lighter">
+			<h1>
+				content will updated soon
+			</h1>
+		</div>
+	</div>
+	
+	<div class="row footer light remove-margin-x">
+		<div class="content">
+			<div class="col-sm-4">
+				<h3>
+					ping us on
+				</h3>
+				<div class="ping-group">
+					<a href="#">
+						<img class="img-responsive padding-right-10" src="images/skype-32.png" alt="Skype">
+					</a>
+					<a href="#">
+						<img class="img-responsive" src="images/facebook-messenger-32.png" alt="Facebook Messenger">
+					</a>
+				</div>
+				<h3>
+					ring us on
+				</h3>
+				<div class="ring-group">
+					<a href="#" id="call">
+						<img class="img-responsive" src="images/ringer-volume-32.png" alt="Phone Ringer">
+						+91 123 456 7890
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<h3>
+					knock door at
+				</h3>
+				<div class="address">
+					highway hotels ltd,<br>
+					street name,<br>
+					locality, city,<br>state - 600001
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<h3>
+					chase us on
+				</h3>
+				<div class="chase-group">
+					<a href="#">
+						<img class="img-responsive" src="images/facebook-32.png" alt="Facebook" >
+					</a>
+					<a href="#">
+						<img class="img-responsive" src="images/twitter-32.png" alt="Twitter" >
+					</a>
+					<a href="#">
+						<img class="img-responsive" src="images/instagram-32.png" alt="Instagram" >
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="credits lighter">
 		<h4>
 			E 47
 		</h4>
@@ -64,6 +139,10 @@
 	<script>
 		$(document).ready(function(){
 			$('[data-toggle="tooltip"]').tooltip();
+			
+			$('#call').on('click', function(e) {
+				e.preventDefault();
+			});
 		});
 	</script>
 </body>
