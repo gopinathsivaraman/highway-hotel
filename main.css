@@ -1,4 +1,6 @@
-
+ h1{
+	 font-size: 2.25em !important;
+ }
  .remove-margin-x {
 	 margin-left: 0px !important;
 	 margin-right: 0px !important;
@@ -16,6 +18,7 @@
 	 height: 100%;
 	 position: relative;
 	 margin: 0px;
+	 font-size: 22px;
  }
  
  /* Font Specific Common Styles */
@@ -133,14 +136,30 @@
  
  .testimonial {
 	 background-image: url('images/pink_coffee.jpeg');
-	 height: 700px;
+	 height: 700px !important;
+	 transition: background-image 1s linear;
  }
  
- .testimonial .caption h1{
-	 background-color: rgba(0,0,0,0.7);
-	 text-transform: uppercase;
+ .testimonial .caption > div {
+	 background-color: rgba(0,0,0,0.8);
 	 color: #FFF;
 	 padding: 50px;
+	 width: 40%;
+	 margin: 0px auto;
+ }
+ 
+ .testimonial .caption div h2{
+	 border-bottom: 1px solid #FFF;
+	 padding-bottom: 15px;
+	 margin-top: 10px;
+	 font-weight: 500;
+ }
+ 
+ .testimonial .caption .rating {
+	 width: 50%;
+	 margin: 15px auto 0px auto;
+	 border-top: 1px solid #FFF;
+	 padding-top: 20px;
  }
  
  .footer{
@@ -183,7 +202,21 @@
   .ring-group a span {
 	  padding-left: 15px;
   }
- 
+
+@media (max-width: 992px) {
+	 .footer .content{
+		 width: 100%;
+	 }
+	 
+	 .testimonial .caption > div {
+		width: 75% !important;
+	}
+ } 	 
+@media (max-width: 1300px){	
+	.testimonial .caption > div {
+		width: 60% !important;
+	}
+ }  
  
  @media (max-width: 768px){
 	 .menu { padding-top: 70px; }
@@ -204,10 +237,14 @@
 	.delivery-apps img {
 		max-height: 100px;
 	}
+	
+	.testimonial .caption > div {
+		width: 100% !important;
+	}
+	
+	.footer .content {
+		text-align: center;
+	}
  }
  
- @media (max-width: 992px) {
-	 .footer .content{
-		 width: 100%;
-	 }
- }
+ 

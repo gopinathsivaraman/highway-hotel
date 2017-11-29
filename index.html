@@ -5,7 +5,8 @@
 	<link href="main.css" rel="stylesheet">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/montserrat" type="text/css"/>
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nemoy" type="text/css"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -61,17 +62,27 @@
 			</h1>
 		</div>
 		<div class="delivery-apps-icons text-center">
-			<img class="img-responsive" src="images/zomato_500.png" alt="Zomato" data-toggle="tooltip" title="Zomato">
-			<img class="img-responsive" src="images/foodpanda_500.png" alt="Zomato" data-toggle="tooltip" title="Foodpanda">
-			<img class="img-responsive" src="images/swiggy_500.png" alt="Zomato" data-toggle="tooltip" title="Swiggy">
+			<img class="img-responsive" src="images/zomato_500.png" alt="Zomato">
+			<img class="img-responsive" src="images/foodpanda_500.png" alt="Foodpanda">
+			<img class="img-responsive" src="images/swiggy_500.png" alt="Swiggy">
 		</div>
 	</div>
 	
-	<div class="testimonial">
-		<div class="caption lighter">
-			<h1>
-				content will updated soon
-			</h1>
+	<div class="testimonial" id="testimonial">
+		<div class="caption">
+			<div>
+				<h2 class="regular">Gopinath Sivaraman</h2>
+				<div class="light">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum ultrices lorem nec porta. Donec a nisl vel tellus euismod luctus vitae dignissim sem. Duis sagittis vitae lorem ut lacinia.
+				</div>
+				<div class="rating">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-half-o"></i>
+					<i class="fa fa-star-o"></i>
+				</div>
+			</div>
 		</div>
 	</div>
 	
@@ -137,13 +148,27 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
 	<script>
+		arrayOfImages = [ 'testimonial_one', 'testimonial_two', 'testimonial_three', 'testimonial_four' ];
+	
 		$(document).ready(function(){
 			$('[data-toggle="tooltip"]').tooltip();
 			
 			$('#call').on('click', function(e) {
 				e.preventDefault();
 			});
+
+			count = 0;
+			setInterval(function(){
+				imageUrl = 'images/'+arrayOfImages[count]+'.jpeg';
+				console.log(imageUrl);
+				$('#testimonial').css({ 'background-image': 'url('+imageUrl+')'});
+				count++;
+				if(count == 4)
+					count = 0;
+				 
+			}, 10000);
 		});
+		
 	</script>
 </body>
 
