@@ -18,6 +18,20 @@
 				Highway Hotel
 			</h1>
 		</div>
+		<div id="bottom-nav" class="visible-xs">
+			<div class="active">
+				<i class="fa fa-home"></i>
+			</div>
+			<div>
+				<i class="fa fa-info-circle"></i>
+			</div>
+			<div>
+				<i class="fa fa-picture-o"></i>
+			</div>
+			<div>
+				<i class="fa fa-smile-o"></i>
+			</div>
+		</div>
 	</div>
 	
 	<div class="menu">
@@ -71,8 +85,8 @@
 	<div class="testimonial" id="testimonial">
 		<div class="caption">
 			<div>
-				<h2 class="regular">Gopinath Sivaraman</h2>
-				<div class="light">
+				<h2 class="regular" id="people">Rajesh Kannan</h2>
+				<div class="light" id="comment">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum ultrices lorem nec porta. Donec a nisl vel tellus euismod luctus vitae dignissim sem. Duis sagittis vitae lorem ut lacinia.
 				</div>
 				<div class="rating">
@@ -148,27 +162,70 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
 	<script>
-		arrayOfImages = [ 'testimonial_one', 'testimonial_two', 'testimonial_three', 'testimonial_four' ];
-	
+		arrayOfImages = [ 'images/testimonial_one.jpeg', 'images/testimonial_two.jpeg', 'images/testimonial_three.jpeg', 'images/testimonial_four.jpeg' ];
+		var testimonial = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum ultrices lorem nec porta. Donec a nisl vel tellus euismod luctus vitae dignissim sem. Duis sagittis vitae lorem ut lacinia.";
+		testimonials = [ {
+					"name": "Lorem Ipsum",
+					"testimonial": testimonial,
+					"star": 4.5
+				},{
+					"name": "Lorem Ipsum",
+					"testimonial": testimonial,
+					"star": 3.5
+				},{
+					"name": "Lorem Ipsum",
+					"testimonial": testimonial,
+					"star": 4
+				},{
+					"name": "Lorem Ipsum",
+					"testimonial": testimonial,
+					"star": 2.5
+				}];
+				
+		currentImage = 0;
+		
 		$(document).ready(function(){
 			$('[data-toggle="tooltip"]').tooltip();
 			
 			$('#call').on('click', function(e) {
 				e.preventDefault();
 			});
-
-			count = 0;
-			setInterval(function(){
-				imageUrl = 'images/'+arrayOfImages[count]+'.jpeg';
-				console.log(imageUrl);
-				$('#testimonial').css({ 'background-image': 'url('+imageUrl+')'});
-				count++;
-				if(count == 4)
-					count = 0;
-				 
-			}, 10000);
+			
+			setInterval(changeBackgroundImage, 10000);
 		});
 		
+		function changeBackgroundImage(){
+			$('#testimonial').fadeOut(200, function(){
+				$('#people').text(testimonials[currentImage].name);
+				$('#comment').text(testimonials[currentImage].testimonial);
+				
+				star = testimonials[currentImage].star;
+				
+				$('.rating').empty();
+				
+				
+				for(i=0; i<Math.floor(star); i++)
+					$('.rating').append(' <i class="fa fa-star"></i>');
+			
+				fraction = star.toString().substring(star.toString().indexOf('.')+1);
+				
+				if(fraction == 5)
+					$('.rating').append(' <i class="fa fa-star-half-o"></i>');
+					
+				if(Math.ceil(star) < 5)
+					for(i=0; i<(5-Math.ceil(star)); i++)
+						$('.rating').append(' <i class="fa fa-star-o"></i>');
+				
+				$('#testimonial').css({
+					'background-image': "url('"+arrayOfImages[currentImage]+"')"
+				});
+				$('#testimonial').fadeIn(1000);
+			});
+			
+			currentImage++;
+			if(currentImage == 4)
+				currentImage = 0;
+		}
 	</script>
 </body>
 

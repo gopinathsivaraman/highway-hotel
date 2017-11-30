@@ -137,7 +137,6 @@
  .testimonial {
 	 background-image: url('images/pink_coffee.jpeg');
 	 height: 700px !important;
-	 transition: background-image 1s linear;
  }
  
  .testimonial .caption > div {
@@ -219,6 +218,55 @@
  }  
  
  @media (max-width: 768px){
+	 
+	   #site-title {
+		  display: table;
+		  width: 100%;
+		  height: 85%;
+	  }
+	  
+	  #site-title h1{
+		  display: table-cell;
+		  vertical-align: middle;
+		  position: static;
+		  top: 0;
+		  transform: none;
+	  }
+	  
+	  #bottom-nav {
+		  height: 15%;
+		  background-color: rgba(0,0,0,0.7);
+	  }
+	  
+	  #bottom-nav > div{
+		  width: 25%;
+		  float: left;
+		  height: 100%;
+		  display: table;
+		  text-align: center;
+		  border-right: 1px solid #FFF;
+	  }
+	  
+	  #bottom-nav > div:last-child{
+		  border: none;
+	  }
+	  
+	  #bottom-nav > div.active i {
+		  color: #98CCFD;
+	  }
+	  
+	  #bottom-nav > div.active {
+		  background-color: rgba(0,0,0,0.5);
+	  }
+	  
+	  #bottom-nav > div > i {
+		  color: #FFF;
+		  display: table-cell;
+		  vertical-align: middle;
+		  font-size: 24px;
+		  font-weight: 100px;
+	  }
+	 
 	 .menu { padding-top: 70px; }
 	 
 	 .menu img {
