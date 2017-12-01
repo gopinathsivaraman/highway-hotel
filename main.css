@@ -35,6 +35,133 @@
 	  font-family: 'MontserratExtraLight'; 
  }
  
+ .menu-toggle {
+	 padding: 25px;
+	 right: 0;
+	 position: fixed;
+	 z-index:9;
+	 display: table;
+	
+ }
+ 
+ .lines-group {
+	 width: 32px;
+	 height: 28px;
+	 display: table-cell;
+	 vertical-align: middle;
+	 cursor: pointer;
+ }
+ 
+ .lines-group img {
+	 margin-bottom: 5px;
+	 transform-origin: center;
+	 transition: margin 0.5s, transform 0.8s, opacity 0.3s ease-out;
+ }
+ 
+ .menu-layer {
+	 position: fixed;
+	 width: 100%;
+	 z-index: 8;
+	 margin: 0px;
+	 background-image: url('images/food-eating-potatoes-beer.jpg');
+	 border: none;
+	 padding: 0px;
+	 transition: 0.4s height ease-out;
+	 height: 0%; 
+ }
+ 
+ .menu-layer .menu-contents{
+	 position: static;
+	 height: 100%;
+	 background-color: rgba(0,0,0,0.5);
+	 width: 100%;
+	 padding-top: 75px;
+	 display: none;
+	 overflow: scroll;
+ }
+ 
+ .menu-contents > div {
+	 position: static;
+	 color: #FFF;
+ }
+ 
+ .menu-wrap > div > h3 {
+	 margin-bottom: 40px;
+ }
+ 
+ .menu-wrap .list-of-branches {
+	 height: 300px;
+	 overflow: scroll;
+ }
+ 
+ .list-of-branches{
+	 display: none;
+ }
+ 
+ .locations .options {
+	 cursor: pointer;
+ }
+ 
+ .locations hr {
+	 height: 1px;
+	 background-color: #FFF;
+ }
+ 
+ .list-of-branches ul {
+	 float: right;
+ }
+ 
+ .list-of-branches ul li {
+	 list-style-type: none;
+	 text-align: right;
+ }
+ 
+ .list-of-branches ul li {
+	 cursor: pointer;
+ }
+ 
+ .address {
+	 display: none;
+	 padding-top: 15px; 
+ }
+ 
+ .address hr {
+	 height: 1px;
+	 background-color: #FFF;
+ }
+ 
+ .address a, .address a:hover, .address a:visited, .address a:active, .address a:link {
+	 color: #FFF;
+ }
+ 
+ .contact-form input, .contact-form input, .contact-form textarea {
+	 border: 2px solid #FFF;
+	 border-radius: 0px;
+	 background-color: #000;
+	 padding: 20px 0px 20px 10px;
+	 outline: none;
+	 color: #FFF;
+ }
+ 
+ .contact-form button {
+	 border: 2px solid #FFF;
+	 border-radius: 0px;
+	 background-color: #000;
+	 color: #FFF;
+	 padding: 10px 10px;
+	 width: 128px
+ }
+ 
+ .contact-form button:hover {
+	 color: #000;
+	 background-color: #FFF;
+	 border-color: #66afe9;
+ }
+ 
+ #cover-image {
+	 z-index: 7;
+ }
+ 
  #cover-image, #tastes-best, .chef-selection, .testimonial {
 	 position: relative;
 	 background-repeat: no-repeat;
@@ -218,54 +345,6 @@
  }  
  
  @media (max-width: 768px){
-	 
-	   #site-title {
-		  display: table;
-		  width: 100%;
-		  height: 85%;
-	  }
-	  
-	  #site-title h1{
-		  display: table-cell;
-		  vertical-align: middle;
-		  position: static;
-		  top: 0;
-		  transform: none;
-	  }
-	  
-	  #bottom-nav {
-		  height: 15%;
-		  background-color: rgba(0,0,0,0.7);
-	  }
-	  
-	  #bottom-nav > div{
-		  width: 25%;
-		  float: left;
-		  height: 100%;
-		  display: table;
-		  text-align: center;
-		  border-right: 1px solid #FFF;
-	  }
-	  
-	  #bottom-nav > div:last-child{
-		  border: none;
-	  }
-	  
-	  #bottom-nav > div.active i {
-		  color: #98CCFD;
-	  }
-	  
-	  #bottom-nav > div.active {
-		  background-color: rgba(0,0,0,0.5);
-	  }
-	  
-	  #bottom-nav > div > i {
-		  color: #FFF;
-		  display: table-cell;
-		  vertical-align: middle;
-		  font-size: 24px;
-		  font-weight: 100px;
-	  }
 	 
 	 .menu { padding-top: 70px; }
 	 

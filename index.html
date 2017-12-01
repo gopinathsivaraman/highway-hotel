@@ -11,6 +11,87 @@
 </head>
 
 <body>
+
+	<div class="menu-toggle">
+		<div class="lines-group">
+			<img src="images/horizontal-line-cropped-32.png">
+			<img src="images/horizontal-line-cropped-32.png">
+			<img src="images/horizontal-line-cropped-32.png">
+		</div>
+	</div>
+			
+	<div class="menu-layer">
+		<div class="menu-contents">
+			<div class="menu-wrap container">
+				<div class="col-sm-12 col-md-4">
+					<h3 class="regular">locate</h3>
+					<div class="locations regular">
+						<h2 class="text-right">I am located at <span class="options">select</span></h2>
+						<div class="list-of-branches">
+							<ul>
+								<li><h3>Bangalore</h3></li>
+								<li><h3>Chennai</h3></li>
+								<li><h3>Cochin</h3></li>
+								<li><h3>Delhi</h3></li>
+								<li><h3>Hyderabad</h3></li>
+								<li><h3>Mumbail</h3></li>
+								<li><h3>Kolkatta</h3></li>
+								
+							</ul>
+						</div>
+						<div class="address">
+							<h5>No. 00, Building name</h5>
+							<h5>Street name</h5>
+							<h5>City, State - Pincode</h5>
+							<hr>
+							<div>
+								<a href="callto:+919123456789">
+									<i class="fa fa-phone"></i> +91 123456789
+								</a>
+							</div>
+							<div>
+								<a href="mailto:support@shop.com">
+									<i class="fa fa-envelope"></i> support@shop.com
+								</a>
+							</div>
+						</div>
+						<hr class="visible-xs visible-sm">
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<h3 class="regular">about</h3>
+					<p class="lighter">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p class="lighter">
+					<p class="lighter">
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					</p>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<h3 class="regular">send a mail</h3>
+					<form class="contact-form light">
+						<div class="form-group">
+							<input type="text" placeholder="Full name" class="form-control" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<input type="email" placeholder="Email (required)" class="form-control" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<textarea type="text" placeholder="Comments / Feedback" class="form-control" rows="5"></textarea>
+						</div>
+						<div class="form-group text-right">
+							<button class="btn" type="clear">
+								clear
+							</button>
+							<button class="btn" type="submit">
+								submit
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<div id="cover-image">
 		<div id="site-title" class="regular">
@@ -18,23 +99,9 @@
 				Highway Hotel
 			</h1>
 		</div>
-		<div id="bottom-nav" class="visible-xs">
-			<div class="active">
-				<i class="fa fa-home"></i>
-			</div>
-			<div>
-				<i class="fa fa-info-circle"></i>
-			</div>
-			<div>
-				<i class="fa fa-picture-o"></i>
-			</div>
-			<div>
-				<i class="fa fa-smile-o"></i>
-			</div>
-		</div>
 	</div>
 	
-	<div class="menu">
+	<div class="menu" id="menu">
 	
 		<h3 class="lighter">
 			snacks  drinks  food
@@ -160,8 +227,12 @@
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
 	<script>
+		
+		var isMenuCrossed = false;
+		var dropdownState = "closed";
 		arrayOfImages = [ 'images/testimonial_one.jpeg', 'images/testimonial_two.jpeg', 'images/testimonial_three.jpeg', 'images/testimonial_four.jpeg' ];
 		var testimonial = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum ultrices lorem nec porta. Donec a nisl vel tellus euismod luctus vitae dignissim sem. Duis sagittis vitae lorem ut lacinia.";
 		testimonials = [ {
@@ -185,14 +256,48 @@
 		currentImage = 0;
 		
 		$(document).ready(function(){
-			$('[data-toggle="tooltip"]').tooltip();
 			
+			$('[data-toggle="tooltip"]').tooltip();
 			$('#call').on('click', function(e) {
 				e.preventDefault();
 			});
 			
 			setInterval(changeBackgroundImage, 10000);
+			
+			$('.lines-group').on('click', function() {
+				$(".list-of-branches").niceScroll({cursorwidth: '5px', autohidemode: true, zindex: 999 });
+				if(!isMenuCrossed){
+					$('.lines-group img').css({'margin-bottom': '-2px'});
+					$('.lines-group img:nth-child(2)').css({'opacity': '0'});
+					$('.lines-group img:nth-child(1)').css({'transform': 'rotate(45deg)'});
+					$('.lines-group img:nth-child(3)').css({'transform': 'rotate(-45deg)'});
+					$('.menu-contents').fadeIn('slow');
+					$('.menu-layer').css({'height': '100%'});
+					isMenuCrossed = true;
+				}else{
+					$('.lines-group img').css({'margin-bottom': '5px'});
+					$('.lines-group img:nth-child(2)').css({'opacity': '1'});
+					$('.lines-group img').css({'transform': 'rotate(0deg)'});
+					$('.menu-layer').css({'height': '0%'});
+					$('.menu-contents').fadeOut('fast');
+					isMenuCrossed = false;
+				}
+			});
+			
+			$('.options, .list-of-branches ul li').on('click', function(){
+				$('.list-of-branches').slideToggle('fast');
+				$('.options').text($(this).text());
+				if( dropdownState == "open" ){
+					$('.address').fadeIn('fast');
+					dropdownState = "closed";
+				}else{
+					$('.address').fadeOut('fast');
+					dropdownState = "open";
+				}
+			});
+			
 		});
+		
 		
 		function changeBackgroundImage(){
 			$('#testimonial').fadeOut(200, function(){
