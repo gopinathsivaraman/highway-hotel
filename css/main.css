@@ -16,7 +16,7 @@
 	 height: 100%;
 	 position: relative;
 	 margin: 0px;
-	 font-size: 22px;
+	 font-size: 16px;
  }
  
  a, a:hover, a:visited, a:active, a:link {
@@ -194,6 +194,10 @@
 	  height: 100%;
 	  background-color: rgba(0,0,0,0.5);
   }
+  
+  .site-title h1 {
+	  font-size: 4em;
+  }
  
  .menu{
 	 padding: 75px 0px;
@@ -207,7 +211,6 @@
  .menu h3 {
 	 padding-bottom: 40px;
 	 text-transform: uppercase;
-	 font-size: 2rem !important;
  }
  
  /* highlight text */
@@ -279,6 +282,10 @@
 	 padding: 50px;
 	 width: 40%;
 	 margin: 0px auto;
+ }
+ 
+ .testimonial .caption .comment {
+	 letter-spacing: 0.05rem;
  }
  
  .testimonial .caption div h2{
@@ -377,13 +384,13 @@
 	 }
 	 
 	 .testimonial .caption > div {
-		width: 75% !important;
+		width: 75%;
 	}
  } 	 
 
  @media (max-width: 1300px){	
 	.testimonial .caption > div {
-		width: 60% !important;
+		width: 60%;
 	}
 }
  
