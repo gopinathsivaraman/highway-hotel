@@ -37,7 +37,7 @@ $(document).ready(function(){
 	$('.lines-group').on('click', function() {
 		
 		// init. niceScroll for branches dropdown and options container
-		$(".list-of-branches").niceScroll({cursorwidth: '5px', autohidemode: true, zindex: 999 });
+		$(".location-dropdown").niceScroll({cursorwidth: '5px', autohidemode: true, zindex: 999 });
 		$(".options-contents").niceScroll({cursorwidth: '0px', autohidemode: true, zindex: 999 });
 		
 		// identifies options button state
@@ -74,8 +74,8 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('.options, .list-of-branches ul li').on('click', function(){
-		$('.list-of-branches').slideToggle('fast');
+	$('.options, .location-dropdown ul li').on('click', function(){
+		$('.location-dropdown').slideToggle('fast');
 		$('.options').text($(this).text());
 		if( dropdownState == "open" ){
 			$('.address').fadeIn('fast');

@@ -194,10 +194,6 @@
 	  height: 100%;
 	  background-color: rgba(0,0,0,0.5);
   }
-  
-  .site-title h1 {
-	  font-size: 4em;
-  }
  
  .menu{
 	 padding: 75px 0px;
@@ -391,6 +387,12 @@
  @media (max-width: 1300px){	
 	.testimonial .caption > div {
 		width: 60%;
+	}
+}
+
+@media (min-width: 769px){
+	.site-title h1 {
+		font-size: 4rem;
 	}
 }
  
