@@ -1,6 +1,4 @@
- h1{
-	 font-size: 2.25em !important;
- }
+/* common styles */
  .remove-margin-x {
 	 margin-left: 0px !important;
 	 margin-right: 0px !important;
@@ -21,7 +19,12 @@
 	 font-size: 22px;
  }
  
- /* Font Specific Common Styles */
+ a, a:hover, a:visited, a:active, a:link {
+	 color: #FFF !important;
+	 text-decoration: none !important;
+ }
+ 
+ /* custom font specific common styles */
  
  .regular {
 	  font-family: 'MontserratRegular'; 
@@ -35,7 +38,21 @@
 	  font-family: 'MontserratExtraLight'; 
  }
  
- .menu-toggle {
+ /* typography */
+ .site-title h1, .tastes-best .caption, .chef-selection h4, .testimonial .caption {
+	 text-transform: lowercase;
+	 color: #FFF;
+	 text-align: center;
+	 position: absolute;
+	 left: 0;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 width: 100%;
+ }
+ 
+/* more options toggle */
+ 
+ .options-toggle {
 	 padding: 25px;
 	 right: 0;
 	 position: fixed;
@@ -56,45 +73,50 @@
 	 margin-bottom: 5px;
 	 transform-origin: center;
 	 transition: margin 0.5s, transform 0.8s, opacity 0.3s ease-out;
+	 -webkit-transition: margin 0.5s, transform 0.8s, opacity 0.3s ease-out;
+	 -moz-transition: margin 0.5s, transform 0.8s, opacity 0.3s ease-out;
+	 -o-transition: margin 0.5s, transform 0.8s, opacity 0.3s ease-out;
  }
  
- .menu-layer {
+ /* more options content */
+ .options-container {
 	 position: fixed;
 	 width: 100%;
 	 z-index: 8;
 	 margin: 0px;
-	 background-image: url('images/food-eating-potatoes-beer.jpg');
+	 background-image: url('../images/food-eating-potatoes-beer.jpg');
 	 border: none;
 	 padding: 0px;
+	 -webkit-transition: 0.4s height ease-out;
+	 -moz-transition: 0.4s height ease-out;
+	 -o-transition: 0.4s height ease-out;
 	 transition: 0.4s height ease-out;
 	 height: 0%; 
+	 display: none;
  }
  
- .menu-layer .menu-contents{
+ .options-container .options-contents{
 	 position: static;
 	 height: 100%;
 	 background-color: rgba(0,0,0,0.5);
 	 width: 100%;
 	 padding-top: 75px;
-	 display: none;
-	 overflow: scroll;
+	 overflow-y: scroll;
  }
  
- .menu-contents > div {
+ .options-contents > div {
 	 position: static;
 	 color: #FFF;
  }
  
- .menu-wrap > div > h3 {
+ .options-wrap > div > h3 {
 	 margin-bottom: 40px;
  }
  
- .menu-wrap .list-of-branches {
+ /* location tab */
+ .location-dropdown {
 	 height: 300px;
 	 overflow: scroll;
- }
- 
- .list-of-branches{
 	 display: none;
  }
  
@@ -107,33 +129,27 @@
 	 background-color: #FFF;
  }
  
- .list-of-branches ul {
+ .location-dropdown ul {
 	 float: right;
  }
  
- .list-of-branches ul li {
+ .location-dropdown ul li {
 	 list-style-type: none;
 	 text-align: right;
- }
- 
- .list-of-branches ul li {
 	 cursor: pointer;
  }
  
- .address {
+ .locations .address {
 	 display: none;
 	 padding-top: 15px; 
  }
  
- .address hr {
+ .locations .address hr {
 	 height: 1px;
 	 background-color: #FFF;
  }
  
- .address a, .address a:hover, .address a:visited, .address a:active, .address a:link {
-	 color: #FFF;
- }
- 
+ /* contact form tab */
  .contact-form input, .contact-form input, .contact-form textarea {
 	 border: 2px solid #FFF;
 	 border-radius: 0px;
@@ -158,11 +174,14 @@
 	 border-color: #66afe9;
  }
  
- #cover-image {
+/* cover image and title */
+ .cover-image {
 	 z-index: 7;
+	 background-image: url('../images/food-salad-restaurant-person.jpg');
+	 min-height: 100%;
  }
  
- #cover-image, #tastes-best, .chef-selection, .testimonial {
+ .cover-image, .tastes-best, .chef-selection, .testimonial {
 	 position: relative;
 	 background-repeat: no-repeat;
 	 background-position: center;
@@ -171,29 +190,13 @@
 	 background-attachment: fixed;
  }
  
- #cover-image {
-	 background-image: url('food-salad-restaurant-person.jpg');
-	 min-height: 100%;
- }
- 
-  #site-title {
+ .site-title {
 	  height: 100%;
 	  background-color: rgba(0,0,0,0.5);
   }
  
- #site-title h1, #tastes-best .caption, .chef-selection h4, .testimonial .caption {
-	 text-transform: lowercase;
-	 color: #FFF;
-	 text-align: center;
-	 position: absolute;
-	 left: 0;
-	 top: 50%;
-	 transform: translateY(-50%);
-	 width: 100%;
- }
- 
  .menu{
-	 padding: 100px 0px;
+	 padding: 75px 0px;
 	 text-align: center;
  }
  
@@ -207,18 +210,20 @@
 	 font-size: 2rem !important;
  }
  
- #tastes-best {
-	 height: 600px;
-	 background-image: url('images/spoons.jpeg');
+ /* highlight text */
+ .tastes-best {
+	 height: 700px;
+	 background-image: url('../images/spoons.jpeg');
  }
  
- #tastes-best .caption h1 {
+ .tastes-best .caption h3 {
 	 display: inline-block;
-	 padding: 25px 50px;
+	 padding: 50px 50px;
 	 background-color: rgba(0,0,0,0.7);
 	 text-transform: uppercase;
  }
  
+ /* chef selection */
  .chef-selection-title {
 	 position: relative;
 	 padding: 75px 0px;
@@ -229,8 +234,8 @@
  }
  
  .chef-selection {
-	 height: 750px;
-	 background-image: url('images/avocado_bacon.jpeg');
+	 height: 700px;
+	 background-image: url('../images/avocado_bacon.jpeg');
 	 text-align: center;
  }
  
@@ -245,6 +250,7 @@
 	 font-size: 50px;
  }
  
+ /* food delivery apps icons */
  .delivery-apps {
 	 padding: 75px 0px;
  }
@@ -261,8 +267,9 @@
 	 display: inline;
  }
  
+ /* testimonial */
  .testimonial {
-	 background-image: url('images/pink_coffee.jpeg');
+	 background-image: url('../images/pink_coffee.jpeg');
 	 height: 700px !important;
  }
  
@@ -288,6 +295,7 @@
 	 padding-top: 20px;
  }
  
+ /* footer */
  .footer{
 	 padding: 50px 0px;
 	 background-color: #000;
@@ -304,13 +312,6 @@
 	 margin: 0px auto;
  }
  
- .credits {
-	 padding: 25px 0px;
-	 color: #000;
-	 background-color: #FFF;
-	 text-align: center;
- }
- 
  .ping-group img {
 	 max-height: 32px;
 	 margin-top: 10px;
@@ -320,34 +321,30 @@
 	 display: inline;
   }
   
-  a, a:hover, a:visited, a:active {
-	  text-decoration: none !important;
-	  color: #FFF;
-  }
-  
   .ring-group a span {
 	  padding-left: 15px;
   }
-
-@media (max-width: 992px) {
-	 .footer .content{
-		 width: 100%;
-	 }
-	 
-	 .testimonial .caption > div {
-		width: 75% !important;
-	}
- } 	 
-@media (max-width: 1300px){	
-	.testimonial .caption > div {
-		width: 60% !important;
-	}
- }  
+  
+  .dev-signature {
+	 padding: 25px 0px;
+	 color: #000;
+	 background-color: #FFF;
+	 text-align: center;
+ }
+ 
+ .dev-signature hr {
+	 width: 50%;
+	 height: 1px;
+	 background-color: #FFF;
+ }
+ 
+ .git-buttons div {
+	 display: inline-block;
+ }
+ 
+ /* responsive style */
  
  @media (max-width: 768px){
-	 
-	 .menu { padding-top: 70px; }
-	 
 	 .menu img {
 		 height: 40px;
 		 margin-top: 30px;
@@ -374,4 +371,19 @@
 	}
  }
  
+ @media (max-width: 992px) {
+	 .footer .content{
+		 width: 100%;
+	 }
+	 
+	 .testimonial .caption > div {
+		width: 75% !important;
+	}
+ } 	 
+
+ @media (max-width: 1300px){	
+	.testimonial .caption > div {
+		width: 60% !important;
+	}
+}
  

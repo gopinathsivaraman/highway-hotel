@@ -2,32 +2,38 @@
 
 <head>
 	<title>Highway Hotel</title>
-	<link href="main.css" rel="stylesheet">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/montserrat" type="text/css"/>
-	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nemoy" type="text/css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="icon" type="image/png" href="images/favicon.ico">
+	<link href="css/main.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content"gopinath sivaraman">
 </head>
 
 <body>
 
-	<div class="menu-toggle">
+	<!-- more options -->
+	<!-- more options toggle -->
+	<div class="options-toggle">
 		<div class="lines-group">
 			<img src="images/horizontal-line-cropped-32.png">
 			<img src="images/horizontal-line-cropped-32.png">
 			<img src="images/horizontal-line-cropped-32.png">
 		</div>
 	</div>
-			
-	<div class="menu-layer">
-		<div class="menu-contents">
-			<div class="menu-wrap container">
+	<!-- / more options toggle -->
+	
+	<!-- more options content -->
+	<div class="options-container">
+		<div class="options-contents">
+			<div class="options-wrap container">
+				<!-- finding location content -->
 				<div class="col-sm-12 col-md-4">
 					<h3 class="regular">locate</h3>
 					<div class="locations regular">
 						<h2 class="text-right">I am located at <span class="options">select</span></h2>
-						<div class="list-of-branches">
+						<div class="location-dropdown">
 							<ul>
 								<li><h3>Bangalore</h3></li>
 								<li><h3>Chennai</h3></li>
@@ -58,6 +64,9 @@
 						<hr class="visible-xs visible-sm">
 					</div>
 				</div>
+				<!-- / finding location content -->
+				
+				<!-- about tab content -->
 				<div class="col-sm-6 col-md-4">
 					<h3 class="regular">about</h3>
 					<p class="lighter">
@@ -67,6 +76,9 @@
 						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 					</p>
 				</div>
+				<!-- / about tab content -->
+				
+				<!-- feedback form content -->
 				<div class="col-sm-6 col-md-4">
 					<h3 class="regular">send a mail</h3>
 					<form class="contact-form light">
@@ -89,20 +101,24 @@
 						</div>
 					</form>
 				</div>
+				<!-- / feedback form content -->
 			</div>
 		</div>
 	</div>
+	<!-- / more options -->
 	
-	<div id="cover-image">
-		<div id="site-title" class="regular">
+	<!-- cover image of site -->
+	<div class="cover-image">
+		<div class="site-title regular">
 			<h1>
 				Highway Hotel
 			</h1>
 		</div>
 	</div>
+	<!-- / cover image of site -->
 	
-	<div class="menu" id="menu">
-	
+	<!-- menu icons -->
+	<div class="menu">
 		<h3 class="lighter">
 			snacks  drinks  food
 		</h3>
@@ -113,19 +129,23 @@
 		<img src="images/french-fries-80.png" alt="French Fries" data-toggle="tooltip" title="French Fries"  />
 		<img src="images/bar-80.png" alt="Whiskey" data-toggle="tooltip" title="Whiskey"  />
 	</div>
+	<!-- / menu icons -->
 	
-	<div id="tastes-best">
+	<!-- preparation highlights -->
+	<div class="tastes-best">
 		<div class="caption lighter">
-			<h1>
+			<h3>
 				perfect ingredients for perfect taste
-			</h1>
+			</h3>
 		</div>
 	</div>
+	<!-- / preparation highlights -->
 	
+	<!-- chef selection content -->
 	<div class="chef-selection-title">
-		<h1 class="lighter">
+		<h3 class="lighter">
 			Handpicked by Chef
-		</h1>
+		</h3>
 	</div>
 	
 	<div class="chef-selection">
@@ -135,12 +155,14 @@
 			</h4>
 		</div>
 	</div>
+	<!-- / chef selection content -->
 	
+	<!-- associated food delivery apps icons -->
 	<div class="delivery-apps">
 		<div class="title">
-			<h1 class="regular">
+			<h3 class="regular">
 				find us on
-			</h1>
+			</h3>
 		</div>
 		<div class="delivery-apps-icons text-center">
 			<img class="img-responsive" src="images/zomato_500.png" alt="Zomato">
@@ -149,10 +171,13 @@
 		</div>
 	</div>
 	
+	<!-- / associated food delivery apps icons -->
+	
+	<!-- testimonial content (carousel) -->
 	<div class="testimonial" id="testimonial">
 		<div class="caption">
 			<div>
-				<h2 class="regular" id="people">Rajesh Kannan</h2>
+				<h2 class="regular" id="people">lorem ipsum</h2>
 				<div class="light" id="comment">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum ultrices lorem nec porta. Donec a nisl vel tellus euismod luctus vitae dignissim sem. Duis sagittis vitae lorem ut lacinia.
 				</div>
@@ -166,7 +191,9 @@
 			</div>
 		</div>
 	</div>
+	<!-- / testimonial content (carousel) -->
 	
+	<!-- footer content -->
 	<div class="row footer light remove-margin-x">
 		<div class="content">
 			<div class="col-sm-4">
@@ -185,7 +212,7 @@
 					ring us on
 				</h3>
 				<div class="ring-group">
-					<a href="#" id="call">
+					<a href="callto:+911234567890">
 						<img class="img-responsive" src="images/ringer-volume-32.png" alt="Phone Ringer">
 						+91 123 456 7890
 					</a>
@@ -219,119 +246,34 @@
 			</div>
 		</div>
 	</div>
+	<!-- / footer content -->
 	
-	<div class="credits lighter">
+	<!-- developer signature -->
+	<div class="dev-signature lighter">
 		<h4>
 			E 47
 		</h4>
+		<hr/>
+		<div class="git-buttons">
+			<div class="follow">
+				<a class="github-button" href="https://github.com/gopinathsivaraman" aria-label="Follow @gopinathsivaraman on GitHub">Follow @gopinathsivaraman</a>
+			</div>
+			<div class="fork">
+				<a class="github-button" href="https://github.com/gopinathsivaraman/highway-hotel/fork" aria-label="Fork gopinathsivaraman/highway-hotel on GitHub">Fork</a>
+			</div>
+			<div class="download">
+				<a class="github-button" href="https://github.com/gopinathsivaraman/highway-hotel/archive/master.zip" aria-label="Download gopinathsivaraman/highway-hotel on GitHub">Download</a>
+			</div>
+		</div>
 	</div>
+	<!-- / developer signature -->
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
-	<script>
-		
-		var isMenuCrossed = false;
-		var dropdownState = "closed";
-		arrayOfImages = [ 'images/testimonial_one.jpeg', 'images/testimonial_two.jpeg', 'images/testimonial_three.jpeg', 'images/testimonial_four.jpeg' ];
-		var testimonial = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum ultrices lorem nec porta. Donec a nisl vel tellus euismod luctus vitae dignissim sem. Duis sagittis vitae lorem ut lacinia.";
-		testimonials = [ {
-					"name": "Lorem Ipsum",
-					"testimonial": testimonial,
-					"star": 4.5
-				},{
-					"name": "Lorem Ipsum",
-					"testimonial": testimonial,
-					"star": 3.5
-				},{
-					"name": "Lorem Ipsum",
-					"testimonial": testimonial,
-					"star": 4
-				},{
-					"name": "Lorem Ipsum",
-					"testimonial": testimonial,
-					"star": 2.5
-				}];
-				
-		currentImage = 0;
-		
-		$(document).ready(function(){
-			
-			$('[data-toggle="tooltip"]').tooltip();
-			$('#call').on('click', function(e) {
-				e.preventDefault();
-			});
-			
-			setInterval(changeBackgroundImage, 10000);
-			
-			$('.lines-group').on('click', function() {
-				$(".list-of-branches").niceScroll({cursorwidth: '5px', autohidemode: true, zindex: 999 });
-				if(!isMenuCrossed){
-					$('.lines-group img').css({'margin-bottom': '-2px'});
-					$('.lines-group img:nth-child(2)').css({'opacity': '0'});
-					$('.lines-group img:nth-child(1)').css({'transform': 'rotate(45deg)'});
-					$('.lines-group img:nth-child(3)').css({'transform': 'rotate(-45deg)'});
-					$('.menu-contents').fadeIn('slow');
-					$('.menu-layer').css({'height': '100%'});
-					isMenuCrossed = true;
-				}else{
-					$('.lines-group img').css({'margin-bottom': '5px'});
-					$('.lines-group img:nth-child(2)').css({'opacity': '1'});
-					$('.lines-group img').css({'transform': 'rotate(0deg)'});
-					$('.menu-layer').css({'height': '0%'});
-					$('.menu-contents').fadeOut('fast');
-					isMenuCrossed = false;
-				}
-			});
-			
-			$('.options, .list-of-branches ul li').on('click', function(){
-				$('.list-of-branches').slideToggle('fast');
-				$('.options').text($(this).text());
-				if( dropdownState == "open" ){
-					$('.address').fadeIn('fast');
-					dropdownState = "closed";
-				}else{
-					$('.address').fadeOut('fast');
-					dropdownState = "open";
-				}
-			});
-			
-		});
-		
-		
-		function changeBackgroundImage(){
-			$('#testimonial').fadeOut(200, function(){
-				$('#people').text(testimonials[currentImage].name);
-				$('#comment').text(testimonials[currentImage].testimonial);
-				
-				star = testimonials[currentImage].star;
-				
-				$('.rating').empty();
-				
-				
-				for(i=0; i<Math.floor(star); i++)
-					$('.rating').append(' <i class="fa fa-star"></i>');
-			
-				fraction = star.toString().substring(star.toString().indexOf('.')+1);
-				
-				if(fraction == 5)
-					$('.rating').append(' <i class="fa fa-star-half-o"></i>');
-					
-				if(Math.ceil(star) < 5)
-					for(i=0; i<(5-Math.ceil(star)); i++)
-						$('.rating').append(' <i class="fa fa-star-o"></i>');
-				
-				$('#testimonial').css({
-					'background-image': "url('"+arrayOfImages[currentImage]+"')"
-				});
-				$('#testimonial').fadeIn(1000);
-			});
-			
-			currentImage++;
-			if(currentImage == 4)
-				currentImage = 0;
-		}
-	</script>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+	<script src="js/main.js"> </script>
+	
 </body>
 
 </html>
