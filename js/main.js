@@ -37,8 +37,8 @@ $(document).ready(function(){
 	$('.lines-group').on('click', function() {
 		
 		// init. niceScroll for branches dropdown and options container
-		$(".location-dropdown").niceScroll({cursorwidth: '5px', autohidemode: true, zindex: 999 });
-		$(".options-contents").niceScroll({cursorwidth: '0px', autohidemode: true, zindex: 999 });
+		$(".location-dropdown").niceScroll({cursorwidth: '2px', autohidemode: true, zindex: -999 });
+		$(".options-contents").niceScroll({cursorwidth: '0px', autohidemode: false, zindex: -999 });
 		
 		// identifies options button state
 		if(!isOptionsOpened){

@@ -1,4 +1,5 @@
 /* common styles */
+
  .remove-margin-x {
 	 margin-left: 0px !important;
 	 margin-right: 0px !important;
@@ -38,8 +39,12 @@
 	  font-family: 'MontserratExtraLight'; 
  }
  
+ li.active a {
+	 color: #98CCFD !important;
+ }
+ 
  /* typography */
- .site-title h1, .tastes-best .caption, .chef-selection h4, .testimonial .caption {
+ .site-title > div, .tastes-best .caption, .chef-selection h4, .testimonial .caption {
 	 text-transform: lowercase;
 	 color: #FFF;
 	 text-align: center;
@@ -48,6 +53,10 @@
 	 top: 50%;
 	 transform: translateY(-50%);
 	 width: 100%;
+ }
+ 
+ .site-title > div > h1 {
+	 text-transform: capitalize;
  }
  
 /* more options toggle */
@@ -102,6 +111,7 @@
 	 width: 100%;
 	 padding-top: 75px;
 	 overflow-y: scroll;
+	 overflow-x: hidden;
  }
  
  .options-contents > div {
@@ -113,6 +123,41 @@
 	 margin-bottom: 40px;
  }
  
+ .options-contents hr {
+	 height: 2px solid #FFF;
+ }
+ 
+ /* main nav */
+ .main-nav-container { padding-bottom: 50px;}
+ .main-nav {
+	 display: inline;
+	 padding: 0px;
+	 margin: 0px;
+ }
+ 
+ .main-nav li {
+	 list-style-type: none;
+	 display: inline;
+	 padding: 0px 25px;
+ }
+ 
+ .main-nav li:last-child {
+	 padding-right: 0px;
+ }
+ 
+ .main-nav li a {
+	 font-size: 20px;
+	 transition: all .4s ease-out;
+	 -webkit-transition: all .4s ease-out;
+	 -moz-transition: all .4s ease-out;
+	 -o-transition: all .4s ease-out;
+	 
+ }
+ 
+ .main-nav li a:hover {
+	 color: #98CCFD !important;
+ }
+ 
  /* location tab */
  .location-dropdown {
 	 height: 300px;
@@ -122,6 +167,36 @@
  
  .locations .options {
 	 cursor: pointer;
+ }
+ 
+ .list { display: inline; }
+ .list a {
+	 position: relative;
+	 transition: all .4s ease-out;
+ }
+ 
+ .list .options:after {
+	 content: '';
+	 position: absolute;
+	 height: 2px;
+	 width: 0px;
+	 -webkit-transition: all .4s ease-out;
+	 -moz-transition: all .4s ease-out;
+	 -o-transition: all .4s ease-out;
+	 transition: all .5s ease-out;
+	 bottom: -5px;
+	 right: 0px;
+ }
+ 
+ .list .options:hover:after {
+	 width: 100%;
+	 background: #98CCFD;
+ }
+ 
+ .list .options:hover { color: #98CCFD !important; }
+ 
+ .locations small {
+	 color: #FFF;
  }
  
  .locations hr {
@@ -137,6 +212,17 @@
 	 list-style-type: none;
 	 text-align: right;
 	 cursor: pointer;
+ }
+ 
+ .location-dropdown ul li h3 {
+	 transition: color .3s ease-out;
+	 -webkit-transition: color .3s ease-out;
+	 -moz-transition: color .3s ease-out;
+	 -o-transition: color .3s ease-out;
+ }
+
+ .location-dropdown ul li h3:hover {
+	 color: #98CCFD;
  }
  
  .locations .address {
@@ -192,7 +278,7 @@
  
  .site-title {
 	  height: 100%;
-	  background-color: rgba(0,0,0,0.5);
+	  background-color: rgba(0,0,0,0.3);
   }
  
  .menu{
@@ -396,3 +482,34 @@
 	}
 }
  
+/***************************************************************************************************************
+* style for non index pages 
+***************************************************************************************************************/
+ @keyframes text-animation {
+	 0%   {color: #5D1079;}
+    50%  {color: #76B1E9;}
+    100%  {color: #5D1079;}
+ }
+
+/* header */
+.page-title {
+	height: 256px;
+	position: relative;
+	z-index: 7;
+	display: table;
+	width: 100%;
+	background-color: rgba(0,0,0,1);
+	color: #FFF;
+}
+
+.page-title h1 {
+	animation-name: text-animation;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+.page-title > div {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
