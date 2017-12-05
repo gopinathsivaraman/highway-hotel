@@ -39,6 +39,14 @@
 	  font-family: 'MontserratExtraLight'; 
  }
  
+ .cursive-regular {
+	font-family: 'GreatVibesRegular'; 
+ }
+ 
+ .cursive-heading {
+	 font-family: 'PetitFormalScriptRegular'
+ }
+ 
  li.active a {
 	 color: #98CCFD !important;
  }
@@ -76,6 +84,7 @@
 	 display: table-cell;
 	 vertical-align: middle;
 	 cursor: pointer;
+	 padding-top: 5px;
  }
  
  .lines-group img {
@@ -141,7 +150,7 @@
 	 padding: 0px 25px;
  }
  
- .main-nav li:last-child {
+ .main-nav li.last-child-xs {
 	 padding-right: 0px;
  }
  
@@ -263,7 +272,7 @@
 /* cover image and title */
  .cover-image {
 	 z-index: 7;
-	 background-image: url('../images/food-salad-restaurant-person.jpg');
+	 background-image: url('../images/menu-restaurant-vintage-table.jpg');
 	 min-height: 100%;
  }
  
@@ -279,6 +288,22 @@
  .site-title {
 	  height: 100%;
 	  background-color: rgba(0,0,0,0.3);
+  }
+  
+  .book-a-table a.btn {
+	  border: 1px solid #FFF !important;
+	  border-radius: 0px;
+	  font-size: 18px;
+	  padding: 12px 36px;
+	  background-color: rgba(57,41,29, 0.4);
+	  transition: background-color .5s ease-out;
+	  -webkit-transition: background-color .5s ease-out;
+	  -moz-transition: background-color .5s ease-out;
+	  -o-transition: background-color .5s ease-out;
+  }
+  
+  .book-a-table a.btn:hover {
+	  background-color: rgba(57,41,29,0.8);
   }
  
  .menu{
@@ -325,7 +350,8 @@
  }
  
  .chef-selection h4 {
-	 width: 50%;
+	 text-transform: inherit;
+	 width: 30%;
 	 padding: 50px 75px;
 	 background-color: rgba(0,0,0,0.6);
 	 text-align: justify;
