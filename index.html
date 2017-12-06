@@ -4,7 +4,8 @@
 	<title>Highway Hotel</title>
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/montserrat" type="text/css"/>
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/rebecca" type="text/css"/>
-	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/petit-formal-script" type="text/css"/>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/dancing" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	<link rel="icon" type="image/png" href="images/favicon.ico">
@@ -23,7 +24,7 @@
 	<!-- more options -->
 	<!-- more options toggle -->
 	<div class="options-toggle">
-		<ul class="regular main-nav">
+		<ul class="regular main-nav hidden-xs">
 			<li class="active">
 				<a href="">home</a>
 			</li>
@@ -51,7 +52,6 @@
 			<div class="options-wrap container">
 				<div class="col-sm-12 text-right visible-xs">
 					<div class="main-nav-container">
-						<h3 class="regular">Navigation</h3>
 						<ul class="lighter main-nav">
 							<li class="active">
 								<a href="">home</a>
@@ -173,38 +173,30 @@
 	<!-- / cover image of site -->
 	
 	<!-- menu icons -->
-	<div class="menu">
-		<h1 class="cursive-heading">
-			we serve
-		</h1>
-		
-		<img src="images/cup-80.png" alt="Tea / Coffee" data-toggle="tooltip" title="Tea and Coffee" />
-		<img src="images/hamburger-80.png" alt="Hamburger" data-toggle="tooltip" title="Hamburger"  />
-		<img src="images/cutlery-80.png" alt="Cutlery" data-toggle="tooltip" title="Cutlery" />
-		<img src="images/french-fries-80.png" alt="French Fries" data-toggle="tooltip" title="French Fries"  />
-		<img src="images/bar-80.png" alt="Whiskey" data-toggle="tooltip" title="Whiskey"  />
+	<div class="menu work-sans">
+		<h1>perfect ingredients for perfect taste</h1>
 	</div>
 	<!-- / menu icons -->
 	
 	<!-- preparation highlights -->
 	<div class="tastes-best">
-		<div class="caption lighter">
-			<h3>
-				perfect ingredients for perfect taste
-			</h3>
+		<div class="caption">
+			<h4 class="work-sans">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</h1>
 		</div>
 	</div>
 	<!-- / preparation highlights -->
 	
 	<!-- chef selection content -->
 	<div class="chef-selection-title">
-		<h3 class="lighter">
+		<h1 class="cursive-heading">
 			Handpicked by Chef
-		</h3>
+		</h1>
 	</div>
 	
 	<div class="chef-selection">
-		<div class="caption light">
+		<div class="caption work-sans">
 			<h4>
 				This salad is a favorite during the hot summer months. Serve it on a bed of your favorite leafy greens with some garlic bread, and everyone is a happy camper.
 			</h4>
@@ -212,41 +204,87 @@
 	</div>
 	<!-- / chef selection content -->
 	
-	<!-- associated food delivery apps icons -->
-	<div class="delivery-apps">
+	<!-- todays special -->
+	<div class="todays-special">
 		<div class="title">
-			<h3 class="regular">
-				ordering online simplified with
-			</h3>
+			<h1 class="cursive-heading">
+				todays special
+			</h1>
+			<small class="work-sans">menu of the day</small>
 		</div>
-		<div class="delivery-apps-icons text-center">
-			<img class="img-responsive" src="images/zomato_500.png" alt="Zomato">
-			<img class="img-responsive" src="images/foodpanda_500.png" alt="Foodpanda">
-			<img class="img-responsive" src="images/swiggy_500.png" alt="Swiggy">
+		<div class="text-center work-sans options">
+			<button class="btn" type="button">breakfast</button>
+			<button class="btn" type="button">lunch</button>
+			<button class="btn" type="button">dinner</button>
 		</div>
-	</div>
-	
-	<!-- / associated food delivery apps icons -->
-	
-	<!-- testimonial content (carousel) -->
-	<div class="testimonial" id="testimonial">
-		<div class="caption">
-			<div>
-				<h2 class="regular" id="people">lorem ipsum</h2>
-				<div class="lighter" id="comment">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum ultrices lorem nec porta. Donec a nisl vel tellus euismod luctus vitae dignissim sem. Duis sagittis vitae lorem ut lacinia.
-				</div>
-				<div class="rating">
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star"></i>
-					<i class="fa fa-star-half-o"></i>
-					<i class="fa fa-star-o"></i>
-				</div>
+		<div class="container items">
+			<div class="col-sm-6 col-md-4 col-lg-4">
+				<figure>
+					<img class="img-responsive" src="images/egg-n-bread.jpeg" alt="Bread and Egg">
+					<figcaption>
+						<div class="regular">
+							Bread with egg
+							<span>
+								&#x20b9;.125
+							</span>
+						</div>
+						<div class="work-sans description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+						<div class="book-dish">
+							<a href="#">
+								order and book table
+							</a>
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4">
+				<figure style="padding: 5px; border: 1px solid #000">
+					<img class="img-responsive" src="images/boiled-egg.jpeg" alt="Boiled Egg">
+					<figcaption>
+						<div class="regular">
+							Boiled
+							<span>
+								&#x20b9;.95 + GST
+							</span>
+						</div>
+						<div class="work-sans description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+						<div class="book-dish">
+							<a href="#">
+								order and book table
+							</a>
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4">
+				<figure style="padding: 5px; border: 1px solid #000">
+					<img class="img-responsive" src="images/bread.jpeg" alt="Creamy Bread">
+					<figcaption>
+						<div class="regular">
+							Creamy Bread
+							<span>
+								&#x20b9;.165
+							</span>
+						</div>
+						<div class="work-sans description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+						<div class="book-dish">
+							<a href="#">
+								order and book table
+							</a>
+						</div>
+					</figcaption>
+				</figure>
 			</div>
 		</div>
 	</div>
-	<!-- / testimonial content (carousel) -->
+	
+	<!-- / todays special -->
 	
 	<!-- footer content -->
 	<div class="row footer light remove-margin-x">

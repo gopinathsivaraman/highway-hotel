@@ -74,9 +74,9 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('.options, .location-dropdown ul li').on('click', function(){
+	$('.locations .options, .location-dropdown ul li').on('click', function(){
 		$('.location-dropdown').slideToggle('fast');
-		$('.options').text($(this).text());
+		$('.locations .options').text($(this).text());
 		if( dropdownState == "open" ){
 			$('.address').fadeIn('fast');
 			dropdownState = "closed";
