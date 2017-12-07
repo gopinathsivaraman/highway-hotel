@@ -1,37 +1,13 @@
 
 var isOptionsOpened = false; // captures options toggle bar state
 var dropdownState = "closed"; // captures dropdown of locations state (closed | opened)
-var currentImage = 0; // sets carousel's initial image
-
-// init. image path for carousel
-arrayOfImages = [ 'images/testimonial_one.jpeg', 'images/testimonial_two.jpeg', 'images/testimonial_three.jpeg', 'images/testimonial_four.jpeg' ];
-
-// init. testimonial data
-var testimonial = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum ultrices lorem nec porta. Donec a nisl vel tellus euismod luctus vitae dignissim sem. Duis sagittis vitae lorem ut lacinia.";
-testimonials = [ {
-			"name": "Lorem Ipsum",
-			"testimonial": testimonial,
-			"star": 4.5
-		},{
-			"name": "Lorem Ipsum",
-			"testimonial": testimonial,
-			"star": 3.5
-		},{
-			"name": "Lorem Ipsum",
-			"testimonial": testimonial,
-			"star": 4
-		},{
-			"name": "Lorem Ipsum",
-			"testimonial": testimonial,
-			"star": 2.5
-		}];
-
+var currentComment = 0; // sets carousel's initial image
 
 $(document).ready(function(){
 	
 	$('[data-toggle="tooltip"]').tooltip(); // activate bootstrap tooltip
 	
-	setInterval(changeBackgroundImage, 10000); // starts carousel timer
+	setInterval(animateTestimonial, 5000); // starts carousel timer
 	
 	// called when options button clicked
 	$('.lines-group').on('click', function() {
@@ -88,44 +64,15 @@ $(document).ready(function(){
 	
 });
 
-// changes image on carousel
-function changeBackgroundImage(){
-	$('#testimonial').fadeOut(200, function(){
-		// set data on container
-		$('#people').text(testimonials[currentImage].name);
-		$('#comment').text(testimonials[currentImage].testimonial);
-		
-		// gets number of starts
-		star = testimonials[currentImage].star;
-		
-		// clears icons on ratings container
-		$('.rating').empty();
-		
-		// appends fully filled stars on ratings
-		for(i=0; i<Math.floor(star); i++)
-			$('.rating').append(' <i class="fa fa-star"></i>');
+function animateTestimonial(){
+	currentComment += 1;
 	
-		// finds half rating
-		fraction = star.toString().substring(star.toString().indexOf('.')+1);
-		
-		// appends half star
-		if(fraction == 5)
-			$('.rating').append(' <i class="fa fa-star-half-o"></i>');
-			
-		// appends empty stars
-		if(Math.ceil(star) < 5)
-			for(i=0; i<(5-Math.ceil(star)); i++)
-				$('.rating').append(' <i class="fa fa-star-o"></i>');
-		
-		// changes testimonial image
-		$('#testimonial').css({
-			'background-image': "url('"+arrayOfImages[currentImage]+"')"
-		});
-		$('#testimonial').fadeIn(1000);
-	});
+	if(currentComment < 3){
+		nextTarget = currentComment * 600;
+		$('.testimonial').find('.holder').animate({marginLeft: '-'+nextTarget+'px'})
+	}else{
+		currentComment = 0;
+		$('.testimonial').find('.holder').animate({marginLeft: '0px'})
+	}
 	
-	// reset current image index of images array
-	currentImage++;
-	if(currentImage == 4)
-		currentImage = 0;
 }

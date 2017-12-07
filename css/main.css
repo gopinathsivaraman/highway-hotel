@@ -55,7 +55,7 @@
  }
  
  /* typography */
- .site-title > div, .tastes-best h4, .chef-selection h4, .testimonial .caption {
+ .site-title > div, .tastes-best h4, .chef-selection h4, .testimonial .content {
 	 text-transform: lowercase;
 	 color: #FFF;
 	 text-align: center;
@@ -78,7 +78,9 @@
 	 position: fixed;
 	 z-index:9;
 	 display: table;
-	
+	 text-align: right;
+	 width: 100%;
+	 background-color: rgba(0,0,0,0.8);
  }
  
  .lines-group {
@@ -390,7 +392,7 @@
  }
  
  .todays-special .title {
-	 text-transform: uppercase;
+	 text-transform: lowercase;
 	 text-align: center;
  }
  
@@ -436,35 +438,40 @@
  /* testimonial */
  
  .testimonial {
-	 background-image: url('../images/pink_coffee.jpeg');
+	 background-image: url('../images/testimonial.jpeg');
 	 height: 700px !important;
  }
  
- .testimonial .caption > div {
-	 background-color: rgba(0,0,0,0.8);
-	 color: #FFF;
-	 padding: 50px;
-	 width: 40%;
+ .testimonial .box {
+	 width: 600px;
+	 background-color: rgba(0,0,0,0.6);
 	 margin: 0px auto;
+	 overflow: hidden;
  }
  
- .testimonial .caption .comment {
-	 letter-spacing: 0.05rem;
- }
+  .testimonial .box .holder {
+	  width: 3000px;
+  }
+  
+  .testimonial .box .holder .item {
+	  width: 600px;
+	  float: left !important;
+	  padding: 25px 40px;
+  }
+  
+  .testimonial .box .holder .item h2 {
+	  margin-bottom: 20px;
+  }
+  
+  .testimonial .box .holder .item hr{
+	  width: 50%;
+  }
+  
+  .customer-comment, .customer-rating {
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+  }	  
  
- .testimonial .caption div h2{
-	 border-bottom: 1px solid #FFF;
-	 padding-bottom: 15px;
-	 margin-top: 10px;
-	 font-weight: 500;
- }
- 
- .testimonial .caption .rating {
-	 width: 50%;
-	 margin: 15px auto 0px auto;
-	 border-top: 1px solid #FFF;
-	 padding-top: 20px;
- }
  
  /* footer */
  .footer{
@@ -519,9 +526,22 @@
 	 .tastes-best .caption h4 {
 		 padding: 50px 15px;
 	 }
+	 
+	 .testimonial .box, .testimonial .box .holder .item {
+		width: 300px;
+	 }
+	 
+	 .testimonial .box .holder .item {
+		padding: 15px 10px;
+	 }
  }
  
  @media (max-width: 768px){
+	 
+	 .options-toggle{
+		 width: auto;
+		 background-color: rgba(0,0,0,0);
+	 }
 	 
 	.main-nav li{
 		display: block !important;
@@ -541,26 +561,19 @@
 		 width: 100%;
 	 }
 	 
-	 .testimonial .caption > div {
-		width: 75%;
-	}
 	
 	.chef-selection h4 {
-		width: 99%;
-		margin: 0px auto;
+		width: 98%;
+		margin: 0px 1%;
 	}
 	
 	.tastes-best .caption h4 {
-		 width: 100%;
+		width: 98%;
+		margin: 0px 1%;
 	}
 	
  } 	 
 
- @media (max-width: 1300px){	
-	.testimonial .caption > div {
-		width: 60%;
-	}
-}
 
 @media (min-width: 769px){
 	.site-title h1 {
